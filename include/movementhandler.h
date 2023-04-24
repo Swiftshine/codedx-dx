@@ -18,7 +18,7 @@ public:
 public:
     MovementHandler();
 
-    void link(const Vec3& position, u32 typeMask, u8 movementId);
+    void link(const Vec3& position, u32 typeMask, u8 movementID);
     void execute();
     u32 getMaskForMovementType(u32 movementType);
 
@@ -36,7 +36,7 @@ public:
     u32 _40;                                // 40
     u32 _44;                                // 44
     u32 typeMask;                           // 48
-    u8 movementId;                          // 4C
+    u8 movementID;                          // 4C
     u32 rotation;                           // 50 
     u8 _54;                                 // 54
     f32 _58;                                // 58

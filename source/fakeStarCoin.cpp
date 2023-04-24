@@ -52,7 +52,7 @@ u32 FakeStarCoin::onCreate()
     addActiveColliders();
 
     u32 movementMask = movementHandler.getMaskForMovementType(settings2 & 0xFF);
-    movementHandler.link(position, movementMask, movementId);
+    movementHandler.link(position, movementMask, movementID);
 
     updateModel();
 
@@ -104,8 +104,8 @@ void FakeStarCoin::collect()
     Effect::spawn(921, &effectPos, nullptr, nullptr);
     PlaySound("SE_OBJ_DDOOR_OPEN", position);
 
-    if (eventId1)
-        EventMgr::instance->set(eventId1-1, 0, true);
+    if (eventID1)
+        EventMgr::instance->set(eventID1-1, 0, true);
 
     isDeleted = true;
 }

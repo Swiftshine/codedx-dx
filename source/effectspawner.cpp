@@ -45,14 +45,14 @@ Actor* EffectSpawner::build(const ActorBuildInfo* buildInfo)
 
 u32 EffectSpawner::onCreate()
 {
-    if (!eventId2)
+    if (!eventID2)
         return 2;
 
     if (settings2 & 0xF0)
         scale.set(effectScales[(settings2 >> 4) & 0xF]);
 
     u32 movementMask = movementHandler.getMaskForMovementType(settings2 & 0xF);
-    movementHandler.link(position, movementMask, movementId);
+    movementHandler.link(position, movementMask, movementID);
 
     spawnEffect = !((settings1 >> 12) & 1);
     effectId = settings1 >> 20;
@@ -70,7 +70,7 @@ u32 EffectSpawner::onExecute()
     movementHandler.execute();
     position = movementHandler.position;
 
-    if (EventMgr::instance->isActive(eventId2-1))
+    if (EventMgr::instance->isActive(eventID2-1))
     {
         if (!spawned)
         {

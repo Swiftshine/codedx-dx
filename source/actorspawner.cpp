@@ -14,7 +14,8 @@ public:
     u32 onCreate() override;
     u32 onExecute() override;
 
-    u16 spawnProfileId;
+    Actor* child;
+    u16 spawnProfileID;
     bool spawned;
 };
 
@@ -28,36 +29,39 @@ Actor* ActorSpawner::build(const ActorBuildInfo* buildInfo)
     return new ActorSpawner(buildInfo);
 }
 
-u32 ActorSpawner::onCreate()
-{
-    if (!eventId2)
+u32 ActorSpawner::onCreate() {
+    this->spawned = false;
+
+    if (!eventID1) // nybbles 3-4
         return 2;
 
-    u16 inputId = linkId | ((movementId & 0xF) << 8);
-    if (movementId & 0x10)
-        spawnProfileId = Profile::spriteToProfileList[inputId];
+    this->child = nullptr;
+
+    u16 inputID = linkID | ((movementID & 0xF) << 8);
+    if (movementID & 0x10)
+        spawnProfileID = Profile::spriteToProfileList[inputID];
     else
-        spawnProfileId = inputId;
+        spawnProfileID = inputID;
 
     spawned = false;
 
-    return 1;
+    return this->onExecute();
 }
 
-u32 ActorSpawner::onExecute()
-{
-    if (EventMgr::instance->isActive(eventId2-1))
-    {
-        if (!spawned)
-        {
+u32 ActorSpawner::onExecute() {
+    if (EventMgr::instance->isActive(eventID1 - 1)) {
+
+        if (!this->spawned) {
             ActorBuildInfo buildInfo = { 0 };
-            buildInfo.settings1 = settings1;
-            buildInfo.settings2 = settings2;
-            buildInfo.profile = Profile::get(spawnProfileId);
+
+            buildInfo.settings1 = this->settings1;
+            buildInfo.settings2 = this->settings2;
+            buildInfo.profile = Profile::get(spawnProfileID);
             buildInfo.position = position;
-            buildInfo.eventId1 = eventId1 & 0xF;
-            buildInfo.eventId2 = (eventId1 >> 8) & 0xF;
-            ActorMgr::instance->create(&buildInfo, 0);
+            buildInfo.eventID1 = (this->eventID2 >> 4) & 0xF;
+            buildInfo.eventID2 = this->eventID2 & 0xF;
+            buildInfo.parentID = this->id;
+            this->child = ActorMgr::instance->create(&buildInfo, 0);
 
             spawned = true;
         }

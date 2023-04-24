@@ -76,8 +76,8 @@ public:
     u8 _218;                    // 218  Inited to 0
     u8 _219;                    // 219  Inited to 1
     u8 _21A;                    // 21A  Inited to 0
-    u8 eventId1;                // 21B
-    u8 eventId2;                // 21C
+    u8 eventID1;                // 21B
+    u8 eventID2;                // 21C
     u16 _21E;                   // 21E  Inited to actorInfo->_20
     u32 _220;                   // 220  Inited to 0
     u32 _224;                   // 224  Inited to 0

@@ -49,7 +49,7 @@ u32 LightActor::onCreate()
     };
 
     u32 movementMask = movementHandler.getMaskForMovementType(settings2 & 0xFF);
-    movementHandler.link(position, movementMask, movementId);
+    movementHandler.link(position, movementMask, movementID);
 
     lightAttenuationRadius = (settings2 >> 24) * 0.25f;
     lightSource.update(lightType, &position, nullptr, &lightAttenuationRadius, nullptr, &lightColor, nullptr, nullptr);

@@ -93,7 +93,7 @@ u32 MagicLift::onCreate()
     }
 
     u32 movementMask = movementHandler.getMaskForMovementType(settings2 & 0xFF);
-    movementHandler.link(position, movementMask, movementId);
+    movementHandler.link(position, movementMask, movementID);
 
     return 1;
 }

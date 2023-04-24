@@ -357,7 +357,7 @@ void MrSun::executeState_Spit()
         ActorBuildInfo buildInfo = { 0 };
         buildInfo.profile = Profile::get(!isMoon ? ProfileId::PlantFireBall : ProfileId::PlantIceBall);
         buildInfo.position = position;
-        buildInfo.parentId = id;
+        buildInfo.parentID = id;
 
         StageActor* fireball;
 

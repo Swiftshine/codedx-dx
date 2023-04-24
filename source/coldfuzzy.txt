@@ -1,0 +1,50 @@
+#include "actor/enemy.h"
+#include "model.h"
+// playerbase.h
+#include "actormgr.h
+// direction.h
+#include "effect.h"
+// random.h
+#include "movementhandler.h"
+
+
+class ColdFuzzy : public Enemy {
+
+public:
+    ColdFuzzy(const ActorBuildInfo* buildInfo);
+    static Actor* build(const ActorBuildInfo* buildInfo);
+
+    u32 onCreate() override;
+    u32 onExecute() override;
+    u32 onDraw() override;
+
+    void collisionPlayer(ActiveCollider* acSelf, ActiveCollider* acOther) override;
+
+    static ActiveCollider::Info colliderInfo;
+
+    ModelWrapper* model;
+    MovementHandler movementHandler;
+};
+
+const Profile coldFuzzyProfile(&ColdFuzzy::build, ProfileId::ColdFuzzy, "ColdFuzzy", nullptr, 0);
+PROFILE_RESOURCES(ProfileId::ColdFuzzy, "chorobon");
+
+const ActiveCollider::Info ColdFuzzy::colliderInfo = { {0.0f, 0.0f}, {16.0f, 16.0f}, 1, 3, 0, 0xFFFFFFFF, 0xFFFFFFFF, 0, &Enemy::collisionCallback };
+
+ColdFuzzy::ColdFuzzy(const ActorBuildInfo* buildInfo)
+    : Enemy(buildInfo)
+    , model(nullptr)
+    , movementHandler()
+{ }
+
+Actor* ColdFuzzy::build(const ActorBuildInfo* buildInfo) {
+    return new ColdFuzzy(buildInfo);
+}
+
+u32 ColdFuzzy::onCreate() {
+    this->model = ModelWrapper::create("chorobon", "chorobon");
+
+    aCollider.init(this, &this->colliderInfo, 0);
+    addActiveColliders();
+    return 1;
+}
