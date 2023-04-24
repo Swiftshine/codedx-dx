@@ -1,8 +1,8 @@
 #pragma once
 
 #include "stageactor.h"
-#include "collisionmgr.h"
-#include "tilecheck.h"
+#include "game/collision/collisionmgr.h"
+#include "game/stage/tilecheck.h"
 
 class CollisionActor : public StageActor
 {

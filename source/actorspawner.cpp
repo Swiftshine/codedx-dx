@@ -1,6 +1,6 @@
-#include "actor/stageactor.h"
-#include "actormgr.h"
-#include "eventmgr.h"
+#include "game/actor/stageactor.h"
+#include "game/actor/actormgr.h"
+#include "game/stage/eventmgr.h"
 
 #include "model.h"
 #include "drawmgr.h"

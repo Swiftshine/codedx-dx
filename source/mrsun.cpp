@@ -9,9 +9,9 @@
         - Add new states?
 */
 
-#include "actor/enemy.h"
-#include "actormgr.h"
-#include "eventmgr.h"
+#include "game/actor/enemy.h"
+#include "game/actor/actormgr.h"
+#include "game/stage/eventmgr.h"
 
 #include "lightsource.h"
 #include "mask.h"

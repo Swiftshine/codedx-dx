@@ -3,14 +3,14 @@
         - Rotation
 */
 
-#include "actor/stageactor.h"
+#include "game/actor/stageactor.h"
 
 #include "model.h"
 #include "drawmgr.h"
-#include "collider.h"
-#include "movementhandler.h"
-#include "level.h"
-#include "tile.h"
+#include "game/collision/collider.h"
+#include "game/actor/movementhandler.h"
+#include "game/stage/level.h"
+#include "game/stage/tile.h"
 
 class MagicLift : public StageActor
 {

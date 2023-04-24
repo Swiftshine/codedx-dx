@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "level.h"
+#include "game/stage/level.h"
 
 
 class TileLayer

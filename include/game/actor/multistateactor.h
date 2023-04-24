@@ -1,6 +1,6 @@
 #pragma once
 
-#include "collisionactor.h"
+#include "game/actor/collisionactor.h"
 #include "states.h"
 
 class MultiStateActor : public CollisionActor

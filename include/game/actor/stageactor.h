@@ -1,7 +1,7 @@
 #pragma once
 
 #include "actor.h"
-#include "activecollider.h"
+#include "game/collision/activecollider.h"
 
 class StageActor : public Actor
 {

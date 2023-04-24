@@ -1,11 +1,11 @@
-#include "actor/stageactor.h"
+#include "game/actor/stageactor.h"
 
-#include "movementhandler.h"
+#include "game/actor/movementhandler.h"
 #include "model.h"
 #include "drawmgr.h"
 #include "effect.h"
 #include "sound.h"
-#include "eventmgr.h"
+#include "game/stage/eventmgr.h"
 
 class FakeStarCoin : public StageActor
 {

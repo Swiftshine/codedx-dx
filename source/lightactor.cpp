@@ -1,8 +1,8 @@
-#include "actor/stageactor.h"
+#include "game/actor/stageactor.h"
 
 #include "lightsource.h"
 #include "mask.h"
-#include "movementhandler.h"
+#include "game/actor/movementhandler.h"
 
 class LightActor : public StageActor
 {

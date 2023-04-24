@@ -1,5 +1,5 @@
-#include "profile.h"
-#include "actor/actor.h"
+#include "game/actor/profile.h"
+#include "game/actor/actor.h"
 
 Profile* Profile::profilesCustom[NUM_PROFILES_CUSTOM];
 s16 Profile::prioritiesCustom[NUM_PROFILES_CUSTOM] = { 0 };

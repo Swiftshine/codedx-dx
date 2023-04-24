@@ -1,6 +1,6 @@
 #pragma once
 
-#include "actor/stageactor.h"
+#include "game/actor/stageactor.h"
 
 
 class CollisionMgr

@@ -1,4 +1,4 @@
-#include "actor/enemy.h"
+#include "game/actor/enemy.h"
 
 class BobOmb : public Enemy     // actually inherits CarryableEnemy
 {

@@ -3,7 +3,7 @@
 #include "util/vec3.h"
 #include "util/vec3i.h"
 #include "sead.h"
-#include "profile.h"
+#include "game/actor/profile.h"
 
 struct ActorInfo
 {

@@ -1,11 +1,11 @@
-#include "actor/enemy.h"
+#include "game/actor/enemy.h"
 #include "model.h"
 // playerbase.h
 #include "actormgr.h
 // direction.h
 #include "effect.h"
 // random.h
-#include "movementhandler.h"
+#include "game/actor/movementhandler.h"
 
 
 class ColdFuzzy : public Enemy {

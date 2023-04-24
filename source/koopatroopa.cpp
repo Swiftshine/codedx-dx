@@ -1,4 +1,4 @@
-#include "actor/enemy.h"
+#include "game/actor/enemy.h"
 
 class KoopaTroopa : public Enemy     // actually inherits ShellEnemy
 {
