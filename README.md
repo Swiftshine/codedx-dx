@@ -3,4 +3,4 @@ My personal fork of RicBent's [codedx](https://github.com/RicBent/codedx). I aim
 
 ## Special Thanks
 * [RicBent](https://github.com/RicBent) for the original codedx.
-* [Luminyx](https://github.com/Luminyx1) support.
+* [Luminyx](https://github.com/Luminyx1) for support.
