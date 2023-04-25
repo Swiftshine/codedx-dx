@@ -1,5 +1,5 @@
 #include "game/actor/multistateactor.h"
-#include "arearumblemgr.h"
+#include "game/stage/arearumblemgr.h"
 
 class SumoBrosLightning : public MultiStateActor
 {

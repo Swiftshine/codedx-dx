@@ -13,10 +13,10 @@
 #include "game/actor/actormgr.h"
 #include "game/stage/eventmgr.h"
 
-#include "lightsource.h"
-#include "mask.h"
-#include "model.h"
-#include "drawmgr.h"
+#include "game/graphics/lightsource.h"
+#include "game/graphics/lightmask.h"
+#include "game/graphics/model.h"
+#include "game/graphics/drawmgr.h"
 
 class MrSun : public Enemy
 {

@@ -1,10 +1,10 @@
 #include "game/actor/stageactor.h"
 
 #include "game/actor/movementhandler.h"
-#include "model.h"
-#include "drawmgr.h"
-#include "effect.h"
-#include "sound.h"
+#include "game/graphics/model.h"
+#include "game/graphics/drawmgr.h"
+#include "game/graphics/effect.h"
+#include "game/sound/sound.h"
 #include "game/stage/eventmgr.h"
 
 class FakeStarCoin : public StageActor

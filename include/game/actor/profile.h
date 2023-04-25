@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "resarchive.h"
+#include "game/graphics/resarchive.h"
 #include "sead.h"
 #include "preprocessor.h"
 #include "profileid.h"

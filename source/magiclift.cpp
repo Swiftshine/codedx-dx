@@ -5,8 +5,8 @@
 
 #include "game/actor/stageactor.h"
 
-#include "model.h"
-#include "drawmgr.h"
+#include "game/graphics/model.h"
+#include "game/graphics/drawmgr.h"
 #include "game/collision/collider.h"
 #include "game/actor/movementhandler.h"
 #include "game/stage/level.h"

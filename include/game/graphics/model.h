@@ -2,7 +2,7 @@
 
 #include "sead.h"
 #include "util/mtx34.h"
-#include "resarchive.h"
+#include "game/graphics/resarchive.h"
 
 class Model     // this has 2 base classes
 {

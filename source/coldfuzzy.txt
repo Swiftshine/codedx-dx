@@ -1,9 +1,9 @@
 #include "game/actor/enemy.h"
-#include "model.h"
+#include "game/graphics/model.h"
 // playerbase.h
 #include "actormgr.h
 // direction.h
-#include "effect.h"
+#include "game/graphics/effect.h"
 // random.h
 #include "game/actor/movementhandler.h"
 

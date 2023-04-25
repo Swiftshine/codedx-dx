@@ -1,8 +1,8 @@
 #include "game/actor/stageactor.h"
 #include "game/stage/eventmgr.h"
-#include "effect.h"
+#include "game/graphics/effect.h"
 #include "game/actor/movementhandler.h"
-#include "sound.h"
+#include "game/sound/sound.h"
 
 class EffectSpawner : public StageActor
 {

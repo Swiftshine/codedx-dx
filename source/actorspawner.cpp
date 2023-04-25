@@ -2,8 +2,8 @@
 #include "game/actor/actormgr.h"
 #include "game/stage/eventmgr.h"
 
-#include "model.h"
-#include "drawmgr.h"
+#include "game/graphics/model.h"
+#include "game/graphics/drawmgr.h"
 
 class ActorSpawner : public StageActor
 {
